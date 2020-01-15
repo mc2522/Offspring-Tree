@@ -1,0 +1,35 @@
+commit 5e7eaa365860589cdfcbbdd1dc32cc105c6c4e5d
+Author: Mike  Cao <mc2522@cs.rit.edu>
+Date:   Thu Mar 28 23:23:15 2019 -0400
+
+    probably the final commit.
+
+commit d2b71580ea1a74b15bd39de17cc447afe48e6750
+Author: Mike  Cao <mc2522@cs.rit.edu>
+Date:   Thu Mar 28 16:16:59 2019 -0400
+
+    Almost complete. Need to do checks.
+
+commit 798251e3f4ea9650b1f545f2c17054713f69f8f3
+Author: Mike  Cao <mc2522@cs.rit.edu>
+Date:   Thu Mar 28 09:39:56 2019 -0400
+
+    close to completion. need more documentation and testing.
+
+commit 076ee02e30cd619eba6a3de685dff165c1e8e5b3
+Author: Mike  Cao <mc2522@cs.rit.edu>
+Date:   Tue Mar 26 01:19:20 2019 -0400
+
+    Added functions for manipulating the trees.
+
+commit e149fd3869caa10020199395de2c4eb2938a2ad8
+Author: Mike  Cao <mc2522@cs.rit.edu>
+Date:   Mon Mar 25 01:17:11 2019 -0400
+
+    completed simple function.
+
+commit 2336b0612f8b585034695e53e559ec8ea30f6583
+Author: Mike  Cao <mc2522@cs.rit.edu>
+Date:   Fri Mar 22 14:13:41 2019 -0400
+
+    Initial commit.

@@ -1,0 +1,80 @@
+/*
+ * File: helper.h
+ *
+ * helper.h declares the functions necessary for tree operations.
+ *
+ * @author: Mike Cao
+ */
+
+#ifndef HELPER_H
+#define HELPER_H
+
+/*
+ * tree struct
+ */
+typedef struct NTree_S * tree;
+
+/*
+ * Search for the parent and add the child to their offspring. If the arguments 
+ * are missing, print a usage message to stderr and reissue the command prompt. 
+ * Names can be one or multiple words.
+ * @param aTree the tree to add to 
+ * @param parent_name the C string to add the child_name to
+ * @param child_name the C string to add to the parent_name
+ * pre: The names passed into the add function must be non-null and non-empty.
+ */
+void add(tree aTree, char * parent_name, char * child_name);
+
+/*
+ * Search from the tree root for the name, and print the name and its children 
+ * list. If the name is not given, substitute the empty string. If the name is 
+ * not found, report that it was not in the tree.
+ * @param aTree the tree to find the name in
+ * @param name the C string to find
+ */
+void find(tree aTree, char * name);
+
+/*
+ * Print a breadth first traversal of all the offspring from the named person 
+ * down. If the name is not given, use the name of the root person.
+ * @param aTree the tree to find the name in and print the subtree
+ * @param name the C string to print
+ */
+void print(tree aTree, char * name);
+
+/*
+ * Compute and print the count of all members in the tree from the named person 
+ * down. If the name is not given, use the name of the root person. If the name 
+ * is not found, print the size of a non-existent tree as the value 0.
+ * @param aTree the tree to find the name in
+ * @param name the name to find
+ */
+void size(tree aTree, char * name);
+
+/*
+ * Compute and print the height of the tree from the named person down. If the 
+ * name is not given, use the name of the root person. The height of a single 
+ * node tree is 0, and a tree with one parent and one child is height 1. If the 
+ * name is not found, print the height of a non-existent tree as the value -1.
+ * @param aTree the tree the find the name in
+ * @param name the C string to print the height of
+ */
+void height(tree aTree, char * name);
+
+/*
+ * Delete the current tree and re-initialize the offspring tree as an empty tree
+ * @param aTree the tree to delete
+ */
+void init(tree aTree);
+
+/*
+ * Print information on available commands.
+ */
+void help();
+
+/*
+ * Delete the current tree, clean up all dynamic memory and exit.
+ */
+void quit();
+
+#endif // HELPER_H

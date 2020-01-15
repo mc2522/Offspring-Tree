@@ -1,0 +1,23 @@
+FILE * fp;
+                fp = fopen(argv[1],"r");
+                char finput[MAX_INPUT];
+                // read file line by line
+                while(fscanf(fp,"%100[^\n]\n", finput) != EOF) {
+                        char * parent;
+                        parent = strtok(finput,",");
+                        if(parent != NULL) {
+                                tree = insert_child(tree,parent, NULL);
+                                char *child = strtok(NULL, ",");
+                                while(child) {
+                                          // add children to parent
+                                          strcpy(child,trim(child));
+                                          // add the child
+                                          tree = insert_child(tree,parent,child);
+                                          child = strtok(NULL,",");
+                                }
+                        }
+                        //Read next line
+                }
+                //Close file
+                fclose(fp);
+

@@ -1,0 +1,793 @@
+==3824== Memcheck, a memory error detector
+==3824== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3824== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==3824== Command: ./offspring
+==3824== Parent PID: 3817
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108C66: make_queue (offspring.c:45)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d978 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108C6E: make_queue (offspring.c:46)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108CC5: enqueue (offspring.c:65)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108F52: find (offspring.c:162)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DA2: enqueue (offspring.c:91)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108F52: find (offspring.c:162)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d978 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DB5: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108F52: find (offspring.c:162)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DC1: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108F52: find (offspring.c:162)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108F57: find (offspring.c:163)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DD8: dequeue (offspring.c:103)
+==3824==    by 0x108F74: find (offspring.c:167)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d978 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DE4: dequeue (offspring.c:105)
+==3824==    by 0x108F74: find (offspring.c:167)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DF1: dequeue (offspring.c:107)
+==3824==    by 0x108F74: find (offspring.c:167)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d978 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DFD: dequeue (offspring.c:107)
+==3824==    by 0x108F74: find (offspring.c:167)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d978 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E05: dequeue (offspring.c:110)
+==3824==    by 0x108F74: find (offspring.c:167)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108E1E: dequeue (offspring.c:112)
+==3824==    by 0x108F74: find (offspring.c:167)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d978 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E2A: dequeue (offspring.c:115)
+==3824==    by 0x108F74: find (offspring.c:167)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108E36: dequeue (offspring.c:115)
+==3824==    by 0x108F74: find (offspring.c:167)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E7C: free_queue (offspring.c:132)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522d980 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108C66: make_queue (offspring.c:45)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db38 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108C6E: make_queue (offspring.c:46)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108CC5: enqueue (offspring.c:65)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DA2: enqueue (offspring.c:91)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db38 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DB5: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DC1: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108CC5: enqueue (offspring.c:65)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DB5: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DC1: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x109432: print_tree (offspring.c:264)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DD8: dequeue (offspring.c:103)
+==3824==    by 0x1092E7: print_tree (offspring.c:266)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db38 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DE4: dequeue (offspring.c:105)
+==3824==    by 0x1092E7: print_tree (offspring.c:266)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DF1: dequeue (offspring.c:107)
+==3824==    by 0x1092E7: print_tree (offspring.c:266)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db38 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DFD: dequeue (offspring.c:107)
+==3824==    by 0x1092E7: print_tree (offspring.c:266)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db38 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E05: dequeue (offspring.c:110)
+==3824==    by 0x1092E7: print_tree (offspring.c:266)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E2A: dequeue (offspring.c:115)
+==3824==    by 0x1092E7: print_tree (offspring.c:266)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108E36: dequeue (offspring.c:115)
+==3824==    by 0x1092E7: print_tree (offspring.c:266)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108E1E: dequeue (offspring.c:112)
+==3824==    by 0x1092E7: print_tree (offspring.c:266)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db38 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E7C: free_queue (offspring.c:132)
+==3824==    by 0x10944A: print_tree (offspring.c:292)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522db40 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108CC5: enqueue (offspring.c:65)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x108F52: find (offspring.c:162)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc50 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DB5: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x108F52: find (offspring.c:162)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc50 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DC1: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x108F52: find (offspring.c:162)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc50 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DD8: dequeue (offspring.c:103)
+==3824==    by 0x108E77: free_queue (offspring.c:133)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc48 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DE4: dequeue (offspring.c:105)
+==3824==    by 0x108E77: free_queue (offspring.c:133)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc50 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DF1: dequeue (offspring.c:107)
+==3824==    by 0x108E77: free_queue (offspring.c:133)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc48 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DFD: dequeue (offspring.c:107)
+==3824==    by 0x108E77: free_queue (offspring.c:133)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc48 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E05: dequeue (offspring.c:110)
+==3824==    by 0x108E77: free_queue (offspring.c:133)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc50 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108E1E: dequeue (offspring.c:112)
+==3824==    by 0x108E77: free_queue (offspring.c:133)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc48 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E2A: dequeue (offspring.c:115)
+==3824==    by 0x108E77: free_queue (offspring.c:133)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc50 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108E36: dequeue (offspring.c:115)
+==3824==    by 0x108E77: free_queue (offspring.c:133)
+==3824==    by 0x108FB7: find (offspring.c:174)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824==  Address 0x522dc50 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x108F36: find (offspring.c:160)
+==3824==    by 0x109062: add (offspring.c:199)
+==3824==    by 0x109AA6: main (offspring.c:443)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108CC5: enqueue (offspring.c:65)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522e420 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DB5: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522e420 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DC1: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1092D6: print_tree (offspring.c:262)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824==  Address 0x522e420 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x1092BA: print_tree (offspring.c:261)
+==3824==    by 0x109BCD: main (offspring.c:467)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108C66: make_queue (offspring.c:45)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e648 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108C6E: make_queue (offspring.c:46)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108CC5: enqueue (offspring.c:65)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x1096B3: free_tree (offspring.c:363)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DA2: enqueue (offspring.c:91)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x1096B3: free_tree (offspring.c:363)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e648 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DB5: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x1096B3: free_tree (offspring.c:363)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DC1: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x1096B3: free_tree (offspring.c:363)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108CC5: enqueue (offspring.c:65)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1096B3: free_tree (offspring.c:363)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DB5: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1096B3: free_tree (offspring.c:363)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DC1: enqueue (offspring.c:95)
+==3824==    by 0x108EC5: queueT (offspring.c:146)
+==3824==    by 0x108EFC: queueT (offspring.c:149)
+==3824==    by 0x1096B3: free_tree (offspring.c:363)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x1096E2: free_tree (offspring.c:365)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DD8: dequeue (offspring.c:103)
+==3824==    by 0x1096C1: free_tree (offspring.c:366)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e648 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DE4: dequeue (offspring.c:105)
+==3824==    by 0x1096C1: free_tree (offspring.c:366)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108DF1: dequeue (offspring.c:107)
+==3824==    by 0x1096C1: free_tree (offspring.c:366)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e648 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108DFD: dequeue (offspring.c:107)
+==3824==    by 0x1096C1: free_tree (offspring.c:366)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e648 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E05: dequeue (offspring.c:110)
+==3824==    by 0x1096C1: free_tree (offspring.c:366)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E2A: dequeue (offspring.c:115)
+==3824==    by 0x1096C1: free_tree (offspring.c:366)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108E36: dequeue (offspring.c:115)
+==3824==    by 0x1096C1: free_tree (offspring.c:366)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid write of size 8
+==3824==    at 0x108E1E: dequeue (offspring.c:112)
+==3824==    by 0x1096C1: free_tree (offspring.c:366)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e648 is 0 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== Invalid read of size 8
+==3824==    at 0x108E7C: free_queue (offspring.c:132)
+==3824==    by 0x1096F6: free_tree (offspring.c:371)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824==  Address 0x522e650 is 8 bytes after a block of size 8 alloc'd
+==3824==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3824==    by 0x108C4B: make_queue (offspring.c:43)
+==3824==    by 0x109697: free_tree (offspring.c:362)
+==3824==    by 0x109EBB: main (offspring.c:522)
+==3824== 
+==3824== 
+==3824== HEAP SUMMARY:
+==3824==     in use at exit: 0 bytes in 0 blocks
+==3824==   total heap usage: 45 allocs, 45 frees, 3,024 bytes allocated
+==3824== 
+==3824== All heap blocks were freed -- no leaks are possible
+==3824== 
+==3824== For counts of detected and suppressed errors, rerun with: -v
+==3824== ERROR SUMMARY: 277 errors from 68 contexts (suppressed: 0 from 0)

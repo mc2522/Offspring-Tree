@@ -1,0 +1,230 @@
+/*
+ * File: helper.c
+ * @author: Mike Cao
+ * 3/21/19
+ */
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include "helper.h"
+#include "trimit.h"
+
+#define ALLOC_UNIT 50	// max capacity 
+
+/// NTree_S implementation for N-ary tree structure.
+typedef struct NTree_S {
+    const char * name;           ///< name of the person.
+    // TODO CHANGED TO ** from *
+    struct NTree_S ** children;   ///< collection of children.
+    size_t child_count;          ///< current number of children.
+    //size_t height;            ///< height of the subtree
+} NTree;                         ///< NTree is an alias for the struct.
+
+/******************************************************************************/
+
+// struct for queue
+struct Queue {
+	size_t front, rear, size, capacity;
+	tree *array;
+};
+
+/*
+ * function for creating a queue
+ */
+struct Queue* makeQueue() {
+	struct Queue* queue = (struct Queue*)malloc(sizeof(struct Queue));
+	queue->capacity = ALLOC_UNIT;
+	queue->front = queue->size = 0;
+	queue->rear = ALLOC_UNIT - 1;
+	queue->array = (tree*)malloc(sizeof(tree) * queue->capacity);
+	return queue;
+}
+
+size_t full(struct Queue* queue) {
+	return queue->size == queue->capacity;
+}
+
+size_t empty(struct Queue* queue) {
+	return queue->size == 0;
+}	
+
+void enqueue(struct Queue* queue, tree aTree) {
+	if(full(queue))
+		return;
+	queue->rear = (queue->rear + 1) % queue->capacity;
+	queue->array[queue->rear] = aTree;
+	queue->size++;
+}
+
+tree dequeue(struct Queue* queue) {
+	if(empty(queue))
+		return NULL;
+	tree aTree = queue->array[queue->front];
+	queue->front = (queue->front + 1) % queue->capacity;
+	queue->size--;
+	return aTree;
+}
+
+tree front(struct Queue* queue) {
+	if(empty(queue))
+		return NULL;
+	return queue->array[queue->front];
+}
+
+tree rear(struct Queue* queue) {
+	if(empty(queue))
+		return NULL;
+	return queue->array[queue->rear];
+}
+
+void freeQueue(struct Queue* queue) {
+	if(queue->array != NULL)
+		free(queue->array);
+	free(queue);
+}
+
+/******************************************************************************/
+
+tree create_node(char * name) {
+	tree aTree = (tree)malloc(sizeof(struct NTree_S*));
+        aTree->children = (struct NTree_S**)malloc(sizeof(struct NTree_S*));
+	aTree->name = name;
+	aTree->child_count = 0;
+	return aTree;
+}
+
+/*
+ * frees all memory of the tree and its offspring
+ * @param aTree the first node
+ */
+void destroy_tree(tree aTree) {
+	if(aTree != NULL) {
+		for(size_t i = 0; i < aTree->child_count; i++) 
+			destroy_tree(aTree->children[i]);
+	     	free(aTree);	
+	}
+}
+
+/*
+ * returns the node pointer or NULL
+ */
+tree find_node(tree aTree, char * name) {
+	struct Queue* queue = makeQueue();	
+	enqueue(queue, aTree);
+	while(!empty(queue)) {
+		aTree = front(queue);
+		dequeue(queue);
+		if(strcmp(aTree->name, name) == 0) {
+			return aTree;
+		} else {
+			for(size_t i = 0; i < aTree->child_count; i++) {
+				enqueue(queue, aTree->children[i]);
+			}
+		}
+	}
+	freeQueue(queue);
+	return NULL;
+}
+
+tree add_child(tree aTree, char * parent_name, char * child_name) {
+	tree parent = find_node(aTree, parent_name);
+	for(size_t i = 0; i < aTree->child_count; i++) {
+		if(strcmp(parent->children[i]->name, child_name) == 0) {
+			printf("error: %s is already a child of %s\n",
+					child_name, parent_name);
+			return aTree;
+		}
+	}
+	
+	// increase capacity and fix memory allocation?
+	parent->child_count++;
+	parent->children = (struct NTree_S**)realloc(parent->children, 
+		sizeof(struct NTree_S*) * parent->child_count);
+	parent->children[parent->child_count - 1] = create_node(child_name);
+	 printf("%s has %s\n",
+                                        aTree->name,
+                                        aTree->children[parent->child_count - 1]->name);
+	return aTree;
+}
+
+/*
+ * Search for the parent and add the child to their offspring. If the arguments
+ * are missing, print a usage message to stderr and reissue the command prompt.
+ * Names can be one or multiple words.
+ * @param aTree the tree to add to
+ * @param parent_name the C string to add the child_name to
+ * @param child_name the C string to add to the parent_name
+ * pre: The names passed into the add function must be non-null and non-empty.
+ */
+void add(tree aTree, char * parent_name, char * name) {
+	if(parent_name == NULL || name == NULL || 
+			strlen(parent_name) == 0 || strlen(name) == 0) {
+		fprintf(stderr, "usage: add parent_name, name\n");
+		// reissue command prompt by returning prematurely
+		return;
+	}
+	// check if the tree has been started
+	if(aTree == NULL) {
+		// create a node with the parent name
+		tree aTree = create_node(parent_name);
+		// add the child after creating the parent node
+		aTree = add_child(aTree, parent_name, name);
+	} else {
+		// add only the child 
+		aTree = add_child(aTree, parent_name, name);
+	}
+	
+
+
+}
+
+void print(tree aTree, char * name) {
+	/*tree temp = find_node(aTree, name);
+        struct Queue* queue = makeQueue();
+        enqueue(queue, aTree);
+        while(!empty(queue)) {
+                temp = front(queue);
+                dequeue(queue);
+                if(strcmp(aTree->name, name) == 0) {
+                        // do nothing
+                }
+                for(size_t i = 0; i < aTree->child_count; i++) {
+                        enqueue(queue, aTree->children[i]);
+                        printf("%s ", aTree->children[i]->name);
+                }
+
+        }
+        freeQueue(queue);*/
+	printf("%s has %s and %s\n",
+                                        aTree->name,
+                                        aTree->children[0]->name,
+                                        aTree->children[1]->name);
+                   
+	
+}
+
+/*
+ * Delete the current tree and re-initialize the offspring tree as an empty tree
+ * @param aTree the tree to delete
+ */
+void init(tree aTree) {
+	//TODO
+	
+}
+
+/*
+ * Print information on available commands.
+ */
+void help() {
+	printf("User Commands for offspring:\n");
+	printf("add parent-name, child-name # find parent and add child.\n");
+	printf("find name     # search and print name and children if name is found.\n");
+	printf("print [name]  # breadth first traversal of offspring from name.\n");
+	printf("size [name]   # count members in the [sub]tree.\n");
+	printf("height [name] # return the height of [sub]tree.\n");
+	printf("init          # delete current tree and restart with an empty tree.\n");
+	printf("help          # print this information.\n");
+	printf("quit          # delete current tree and end program.\n");
+}
